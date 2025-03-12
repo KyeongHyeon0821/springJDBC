@@ -14,9 +14,10 @@ create table user(
 
 desc user;
 
-insert into user values(default, 'admin', '1234', '관리자', default, default, '서울');
+insert into user values(default, 'admin', '1234', '관리자', default, '남자' , '서울');
 
 select * from user;
 
 select count(*) from user;
 
+update user set gender='남자' where idx=1;

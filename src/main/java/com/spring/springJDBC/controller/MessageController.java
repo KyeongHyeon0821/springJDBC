@@ -27,6 +27,30 @@ public class MessageController {
 			model.addAttribute("message", "이미 사용중인 아이디 입니다.\\n다른 아이디로 가입하세요.");
 			model.addAttribute("url", "/user/userInput");
 		}
+//		else if(msgFlag.equals("userSearchNo")) {
+//			model.addAttribute("message", "등록되지 않은 아이디입니다.\\n다시 검색해 주세요.");
+//			model.addAttribute("url", "/user/userSearch");
+//		}
+		else if(msgFlag.equals("userSearchNo")) {
+			model.addAttribute("message", "회원 정보를 찾지 못했습니다.\\n다시 검색해 주세요.");
+			model.addAttribute("url", "/user/userSearch");
+		}
+		else if(msgFlag.equals("userDeleteOk")) {
+			model.addAttribute("message", "회원을 삭제했습니다.");
+			model.addAttribute("url", "/user/userList");
+		}
+		else if(msgFlag.equals("userDeleteNo")) {
+			model.addAttribute("message", "회원삭제 실패.");
+			model.addAttribute("url", "/user/userList");
+		}
+		else if(msgFlag.equals("userUpdateOk")) {
+			model.addAttribute("message", "회원정보가 수정되었습니다.");
+			model.addAttribute("url", "/user/userList");
+		}
+		else if(msgFlag.equals("userUpdateNo")) {
+			model.addAttribute("message", "다시 시도해주세요.");
+			model.addAttribute("url", "/user/userList");
+		}
 		return "include/message";
 	}
 	
